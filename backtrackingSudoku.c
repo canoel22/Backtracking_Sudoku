@@ -68,6 +68,7 @@ int resolveSudoku(int grade[TAM][TAM],int ordem[],int linha,int coluna){
 		return 1;
 		
 	for (int num = 0; num < TAM; num++){
+		operationCount++;
 		if (valido(grade, linha, coluna, ordem[num])){
 			grade[linha][coluna] = ordem[num];
 			if(resolveSudoku(grade,ordem,linha,coluna+1)){
